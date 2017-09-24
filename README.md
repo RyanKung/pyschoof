@@ -33,60 +33,14 @@ contains Python modules for all these concepts that can be used on
 their own.
 
 
-System Requirements
--------------------
-
-The algorithm is implemented in version 3.1 of [Python][python], an
-open licensed dynamic programming language available on all common
-platforms.  To find out whether a compatible version of Python is
-already installed on your system, execute `python --version` in a
-terminal.  The command will return the version number if Python is
-available.  Note that the version 3 interpreter could also be named
-`python3`.  Please see the *Using Python* part of Python's
-[documentation][python-using] for system installation instructions;
-follow the steps below to set up Python locally in your account.
+Installation
+-------------
 
 
-### Local Installation from Source Code
+```
+pip install pyschoof
 
-Installing Python from source code requires a C compiler; on Linux and
-Unix systems, one is almost always available.  The following steps
-install Python on a Linux system:
-
-* **Download.** Download the source tar ball of version 3.1 or later
-  from the Python website at
-  <http://www.python.org/download/releases/>.
-* **Compile.** Open a terminal and create a temporary directory, say
-  `${HOME}/tmp/`, by executing `mkdir ${HOME}/tmp/`.  Change into the
-  temporary directory and extract the source tar ball: `cd
-  ${HOME}/tmp/` and then `tar xzvf Python-3.1.2.tgz`; adjust the path
-  and file name accordingly.  If you downloaded the bzipped source tar
-  ball, use `tar xjvf Python-3.1.2.tar.bz2` instead.
-  
-  Next, change into the directory that contains the extracted source
-  code, for instance `${HOME}/tmp/Python-3.1.2/`.  Configure the build
-  system by executing `./configure --prefix=${HOME}/python3`.  The
-  prefix is the path that will be the root of the Python installation,
-  so adjust it to taste.  In case required components are missing, the
-  command will exit with an error message.  In this case, please
-  install the components and re-execute `configure`.
-   
-  If everything worked, then the last line of output by `configure`
-  will be `creating Makefile`.  To start the compilation, execute
-  `make`.    
-* **Install.** Use `make install` to install Python after the
-  compilation finished.
-* **Set Up Environment.** To enable the local Python installation, add
-  its interpreter and modules to the respective search paths: execute
-  `export PATH=${HOME}/python3/bin:${PATH}` to tell the shell where to
-  find the `python3` interpreter; adjust the path to your prefix for
-  `configure`.  Likewise, execute `export
-  PYTHONPATH=${HOME}/python3/lib/python3.1` to tell Python where to
-  find its modules.
-    
-  Note that the scope of `export` is the current shell.  Thus you have
-  to issue both commands in every freshly opened terminal you wish to
-  use for Python 3.1 programs.
+```
 
 
 Program Execution
@@ -109,7 +63,7 @@ the galois field *GF[p]*, and *A* and *B* are the curve parameters.
 Suppose you want to count the number of points on the elliptic curve
 over *GF[23]* with parameters *A=4* and *B=2*.  If the current
 directory in the terminal is the repository root, then
-executing `python3 naive_schoof.py 23 4 2` yields the output
+executing `pyschoof 23 4 2` yields the output
 
 ~~~~~
 Counting points on y^2 = x^3 + 4x + 2 over GF<23>: 21
@@ -170,7 +124,7 @@ designs should be simpler to locate.  To run the unit tests, execute
 
 License
 -------
-
+Copyright (c) 2017 Ryan Kung <ryankung@ieee.org>
 Copyright (c) 2010--2012 Peter Dinges <pdinges@acm.org>.
 
 The software in this repository is free software: you can redistribute
