@@ -125,6 +125,7 @@ designs should be simpler to locate.  To run the unit tests, execute
 License
 -------
 Copyright (c) 2017 Ryan Kung <ryankung@ieee.org>
+
 Copyright (c) 2010--2012 Peter Dinges <pdinges@acm.org>.
 
 The software in this repository is free software: you can redistribute
